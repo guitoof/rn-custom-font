@@ -16,15 +16,41 @@ export default class CustomFont extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
+        <Text style={styles.text}>
+          This is the default font
         </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
+        <Text style={[styles.text, styles.customFont, styles.extraLight]}>
+          This is my awesome extra light font
         </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
+        <Text style={[styles.text, styles.customFont, styles.light]}>
+          This is my awesome light font
+        </Text>
+        <Text style={[styles.text, styles.customFont]}>
+          This is my awesome font
+        </Text>
+        <Text style={[styles.text, styles.customFont, styles.semiBold]}>
+          This is my awesome semi-bold font
+        </Text>
+        <Text style={[styles.text, styles.customFont, styles.bold]}>
+          This is my awesome bold font
+        </Text>
+        <Text style={[styles.text, styles.customFont, styles.black]}>
+          This is my awesome black font
+        </Text>
+        <Text style={[styles.text, styles.customFont, styles.italic]}>
+          This is my awesome italic font
+        </Text>
+        <Text style={[styles.text, styles.customFont, styles.extraLight, styles.italic]}>
+          This is my awesome extra light italic font
+        </Text>
+        <Text style={[styles.text, styles.customFont, styles.light, styles.italic]}>
+          This is my awesome light italic font
+        </Text>
+        <Text style={[styles.text, styles.customFont, styles.semiBold, styles.italic]}>
+          This is my awesome semi-bold italic font
+        </Text>
+        <Text style={[styles.text, styles.customFont, styles.italic, styles.bold]}>
+          This is my awesome bold italic font
         </Text>
       </View>
     );
@@ -38,15 +64,31 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
-  welcome: {
+  text: {
     fontSize: 20,
     textAlign: 'center',
     margin: 10,
   },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
+  customFont: {
+    fontFamily: 'Titillium Web',
+  },
+  extraLight: {
+    fontFamily: 'Titillium Web_extra_light'
+  },
+  light: {
+    fontFamily: 'Titillium Web_light'
+  },
+  semiBold: {
+    fontFamily: 'Titillium Web_semi_bold',
+  },
+  bold: {
+    fontFamily: 'Titillium Web_bold', // or fontWeight: 'bold'
+  },
+  black: {
+    fontFamily: 'Titillium Web_black',
+  },
+  italic: {
+    fontStyle: 'italic'
   },
 });
 
